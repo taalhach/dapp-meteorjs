@@ -1,0 +1,27 @@
+<template name="transaction">
+    <!-- <p>From: 0x8BB4D6fB8Bc782855906a70FB43b789099aEB7FE</p>
+    <span>To: </span><input type="text" id="address"> -->
+    <div class="editPost">
+        <form id="transferFrom">
+            <!-- <span>Aa hahah {{TemplateVar.get "txhash"}}</span> -->
+            <input name="fromAdd" type="text" placeholder="From"/>
+            <input name="pk" type="text" placeholder="Private Key"/>
+            <input name="toAdd" type="text" placeholder="To"/>
+            <input name="amount" type='number' step="any" placeholder="Amount"/>
+            <button type="submit" class="save">Transfer BLK</button> 
+            <div>
+                {{#if TemplateVar.get "display" }}
+                <h3>Txhash: {{TemplateVar.get "status"}}</h3>
+                
+                <span>Txhash:
+                    <a target="_blank" href='https://rinkeby.etherscan.io/tx/{{TemplateVar.get "txhash"}}'>
+                {{TemplateVar.get "txhash"}}</a>
+                </span>
+
+                {{else}}
+                {{/if}} 
+    
+            </div>
+        </form>
+    </div>
+</template>

@@ -1,0 +1,20 @@
+<template name="transferHistory">
+    <table class="table">
+        <thead>
+        <th>Amount</th>
+        <th>To </th>
+        <th>From </th>
+        <th>Block number</th>
+        </thead>
+        <tbody>
+        {{#each transferHistory}}
+        <tr class={{severity}}>
+        <td>{{towei value}}</td>
+        <td>{{to}}</td>
+        <td>{{from}}</td>
+        <td>{{blockNumber}}</td>
+        </tr>
+        {{/each}}
+        </tbody>
+        </table>
+</template>
